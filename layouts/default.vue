@@ -1,74 +1,37 @@
 <template>
   <div>
     <nav
-      class="navbar header has-shadow is-primary"
+      class="navbar header has-shadow is-success"
       role="navigation"
       aria-label="main navigation"
     >
       <div class="navbar-brand">
-        <a
-          class="navbar-item"
-          href="/"
-        >
-          <img
-            src="~assets/buefy.png"
-            alt="Buefy"
-            height="28"
-          >
+        <a class="ml-2 p-2 is-size-4 has-text-white" href="/" title="ค้นหาแลปตรวจโควิด">
+          ระบบค้นหาแลปตรวจโควิด
         </a>
-
-        <div class="navbar-burger">
-          <span />
-          <span />
-          <span />
-        </div>
       </div>
     </nav>
 
-    <section class="main-content columns">
-      <aside class="column is-2 section">
-        <p class="menu-label is-hidden-touch">
-          General
-        </p>
-        <ul class="menu-list">
-          <li
-            v-for="(item, key) of items"
-            :key="key"
-          >
-            <NuxtLink
-              :to="item.to"
-              exact-active-class="is-active"
-            >
-              <b-icon :icon="item.icon" /> {{ item.title }}
-            </NuxtLink>
-          </li>
-        </ul>
-      </aside>
-
-      <div class="container column is-10">
+    <section class="">
         <Nuxt />
-      </div>
     </section>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+          <small>
+            ระบบค้นหาแลปตรวจโควิด รวบรวม <a target="_blank" href="#" title="ข้อมูลอ้างอิง">ข้อมูลจากหลายแหล่ง</a> โดยเหล่าอาสาสมัคร กรุณาตรวจสอบกับแลปก่อนเข้ารับบริการ 
+          </small><br>
+          <small>
+            ข้อมูลในเว็บไซต์นี้เปิดเป็น api นักพัฒนาสามารถนำไปพัฒนาต่อยอดได้ <a title="Covid lab data" href="https://covid-lab-data.pages.dev/">Covid lab data</a>
+          </small>
+      </div>
+</footer>
+
   </div>
 </template>
 
-<script>
-export default {
-  data () {
-    return {
-      items: [
-        {
-          title: 'Home',
-          icon: 'home',
-          to: { name: 'index' }
-        },
-        {
-          title: 'Inspire',
-          icon: 'lightbulb',
-          to: { name: 'inspire' }
-        }
-      ]
-    }
-  }
+<style scoped>
+.footer{
+  padding: 1.5rem;
 }
-</script>
+</style>

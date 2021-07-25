@@ -1,0 +1,58 @@
+@media screen and (max-width: 768px)
+{
+    .b-table .table-wrapper.has-mobile-cards tr:not(.detail):not(.is-empty):not(.table-footer) td{
+        justify-content:end;
+        text-align:left
+    }
+
+    .b-table .table-wrapper.has-mobile-cards tr:not(.detail):not(.is-empty):not(.table-footer) td.ignore-label:before {
+        content: '';
+        padding-right: 0em;
+        text-align: left;
+    }
+
+    .remark-visible{
+        visibility:visible !important;
+    }
+
+    th:nth-child(7), td:nth-child(7) {
+        display: block;
+     }
+
+     .card-content{
+         padding: 1rem;
+     }
+}
+
+.remark-visible{
+    visibility:hidden
+}
+
+th:nth-child(8), td:nth-child(8) {
+    display: none;
+ }
+ 
+ 
+ span {
+    white-space:pre-wrap; 
+}
+
+div.tel{
+    white-space: pre-wrap;
+    padding-left: 5px;
+    width: calc(100% - 50px);
+}
+
+div.web{
+    white-space: pre-wrap;
+    padding-left: 5px;
+    width: calc(100% - 70px);
+}
+
+.w250{
+    min-width: 200px;
+}
+
+.field.has-addons{
+    display: block;
+}
