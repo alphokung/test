@@ -71,12 +71,24 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
-    "@nuxtjs/firebase",
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
-
+  firebase: {
+    config: {
+      apiKey: "AIzaSyARPl77zbA7nSAXqrKTulP-wt95SCkQ-ac",
+      authDomain: "covid-lab-53f48.firebaseapp.com",
+      projectId: "covid-lab-53f48",
+      storageBucket: "covid-lab-53f48.appspot.com",
+      messagingSenderId: "619393616173",
+      appId: "1:619393616173:web:dc835b6c16a7d817ae2ba4",
+      measurementId: "G-VVWVZPSN9S"
+    },
+    services: {
+      analytics: true
+    }
+  },
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
@@ -86,11 +98,6 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   buildModules: [
-    [
-      "@nuxtjs/google-analytics",
-      {
-        id: "UA-155074911-1"
-      }
-    ]
+   
   ],
 }
